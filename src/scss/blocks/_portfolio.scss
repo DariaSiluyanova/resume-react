@@ -13,12 +13,23 @@
 
 .portfolio>*{
     flex: 1 1 250px;
-    padding: 0 25px;
+    max-width: 300px;
+    padding: 0 16px;
     margin-bottom: 16px;
     text-align: center;
 
     @media (max-width: 992px) {
+        max-width: 100%;
         padding: 0 10px;
+    }
+    @media (min-width: 1440px) {
+        text-align: start;
+    }
+}
+
+.portfolio__item:last-child {
+    @media (min-width: 1440px) {
+        margin-right: auto;
     }
 }
 
@@ -27,9 +38,10 @@
     border-radius: 16px;
     background-color: var(--bg-color);
     margin-bottom: 20px;
+    max-width: 250px;
 }
 
 .portfolio__info {
-    max-width: 100%;
     font-weight: var(--regular);
+    text-align: center;
 }

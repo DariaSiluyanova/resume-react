@@ -5,6 +5,8 @@ import Contacts from './blocks/Contact';
 import Skills from './blocks/Skills';
 import Languages from './blocks/Languages';
 import Interests from './blocks/Interests';
+import { motion } from 'framer-motion';
+
 const buttons = [
   {
     id: 0,
@@ -49,6 +51,8 @@ export default function SideBar() {
 
   return (
     <div className="side-info">
+      
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <header className="main-header">
         <section className="person">
           <div className="mobile">
@@ -65,7 +69,7 @@ export default function SideBar() {
             <ul className="nav__list">
               {btnState.content.map((btn) => 
                 <Btn 
-                  click={()=>{ toggleActive(btn.id)}} 
+                  click={()=>{ toggleActive(btn.id) }} 
                   active={makeActive(btn.id)} 
                   link={btn.path} 
                   text={btn.text} 
@@ -83,6 +87,7 @@ export default function SideBar() {
         <Languages />
         <Interests />
       </div>
+    </motion.div>
     </div>
   )
 }

@@ -11,6 +11,8 @@ import Welbex from '../assets/content-welbex.jpg';
 import Welbex2x from '../assets/content-welbex2x.jpg';
 import ToDo2x from '../assets/content-todo2x.jpg';
 import ToDo from '../assets/content-todo.jpg';
+import { motion } from 'framer-motion';
+
 
 const promo = [
   <p className="promo__text">
@@ -62,11 +64,13 @@ const dataList = dataPortfolio.map( data => <PortfolioItem key={data.id} id={dat
 
 export default function Portfolio() {
   return (
-    <div className="index-main">
-      <Promo text={promo}/>
-      <ul className="portfolio">
-          {dataList}
-      </ul>
-    </div>
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+      <div className="index-main">
+        <Promo text={promo}/>
+        <ul className="portfolio">
+            {dataList}
+        </ul>
+      </div>
+    </motion.div>
   )
 }

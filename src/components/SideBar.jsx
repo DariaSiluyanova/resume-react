@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Avatar from '../assets/Avatar2x.png'
 import Btn from './blocks/Btn';
 import Contacts from './blocks/Contact';
@@ -17,9 +17,36 @@ const buttons = [
     text: "Портфолио",
   },
 ]
-const btnList = buttons.map(btn => <Btn link={btn.path} text={btn.text} key={btn.id} id={btn.id}/>)
+// const btnList = buttons.map(btn => <Btn link={btn.path} text={btn.text} key={btn.id} id={btn.id}/>)
 
 export default function SideBar() {
+  const [btnState, changeState] = useState(
+    {
+      activeBtn: null,
+      content: buttons,
+    }
+  );
+
+  /**
+   * функция переключает состояние кнопки на active
+   */
+  function toggleActive (index) {
+    changeState({...btnState, activeBtn: btnState.content[index]})
+  }
+
+  /**
+   * функция возвращает класс active для нажатой кнопки 
+   * @param {Number} index 
+   * @returns className
+   */
+  function makeActive(index) {
+    if(btnState.content[index] === btnState.activeBtn) {
+        return 'active'
+    } else {
+      return ''
+    }
+  }
+
   return (
     <div className="side-info">
       <header className="main-header">
@@ -36,7 +63,16 @@ export default function SideBar() {
           </div>
           <nav className="nav">
             <ul className="nav__list">
-             {btnList}
+              {btnState.content.map((btn) => 
+                <Btn 
+                  click={()=>{ toggleActive(btn.id)}} 
+                  active={makeActive(btn.id)} 
+                  link={btn.path} 
+                  text={btn.text} 
+                  key={btn.id} 
+                  id={btn.id}
+                />
+              )}
             </ul>
           </nav>
         </section>

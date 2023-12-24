@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Btn({link, text, id}) {
+export default function Btn({ click, active, link, text, id}) {
   return (
-    <li className="nav__item" key={id}>
-        <Link to={link}>{text}</Link>
+    <li className={`nav__item ${active}`} key={ id } onClick={ click }>
+        <Link to={ link }>{ text }</Link>
     </li>
   )
 }

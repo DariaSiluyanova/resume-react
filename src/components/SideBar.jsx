@@ -97,7 +97,9 @@ export default function SideBar() {
         <Languages />
         <Interests />
         <div className="download">
-          <Btn text="Загрузить резюме" active="download" click={onButtonClick()}/>
+          <li className="nav__item link" onClick={ () => {onButtonClick()} }>
+              Загрузить резюме
+          </li>
         </div>
       </div>
     </motion.div>

@@ -149,6 +149,7 @@
 .nav__item:hover {
     transform: scale(1.1, 1.1);
     opacity: 0.9;
+    transition: all 500ms ease; 
 }
 
 .nav__item.active {
@@ -270,3 +271,4 @@
 .link {
     cursor: pointer;
 }
+

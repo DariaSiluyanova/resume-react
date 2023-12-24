@@ -49,6 +49,16 @@ export default function SideBar() {
     }
   }
 
+  const onButtonClick = () => {
+    const pdfUrl = "../Siluyanova_resume.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Siluyanova_resume.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
   return (
     <div className="side-info">
       
@@ -86,6 +96,9 @@ export default function SideBar() {
         <Skills />
         <Languages />
         <Interests />
+        <div className="download">
+          <Btn text="Загрузить резюме" active="download" click={onButtonClick()}/>
+        </div>
       </div>
     </motion.div>
     </div>

@@ -161,6 +161,7 @@
 
 .interests {
     border-left: 6px solid transparent;
+    margin-bottom: 30px;
 }
 
 .icon-contacts {
@@ -253,4 +254,15 @@
     @media (max-width: 992px) {
         max-width: 35px;
     }
+}
+
+.download{
+    display: flex;
+    justify-content: center;
+}
+
+.download li {
+    max-width: 250px;
+    width: 100%;
+    padding: 20px;
 }

@@ -1,8 +1,10 @@
+@import "../variables";
+
 .main-body {
     display: flex;
     height: 100%;
 
-    @media (max-width: 576px) {
+    @media (max-width: $mobile) {
         flex-direction: column;
     }
 }

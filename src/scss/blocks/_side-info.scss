@@ -8,7 +8,7 @@
     padding-left: 64px;
     padding-bottom: 20px;
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         font-size: 18px;
         padding-left: 37px;
     }
@@ -24,7 +24,7 @@
     border-radius: 50%;
     background-color: var(--accent-color);
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         left: -16px;
         width: 25px;
         height: 25px;
@@ -42,11 +42,11 @@
     color: var(--font-side);
     box-sizing: border-box;
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         padding: 73px 24px 120px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: $mobile) {
         max-width: 100%;
         padding: 30px;
     }
@@ -57,11 +57,11 @@
     max-width: 350px;
     width: 310px;
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         max-width: 210px
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: $mobile) {
         max-width: 100%;
         width: 100%;
     }
@@ -84,7 +84,7 @@
     max-width: 230px;
     max-height: 230px;
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         max-width: 160px;
     }
 }
@@ -105,11 +105,11 @@
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
          font-size: 22px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: $mobile) {
         padding-top: 0;
     }
 }
@@ -126,7 +126,7 @@
     justify-content: space-between;
     font-weight: var(--bold);
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         justify-content: space-evenly;
     }
 }
@@ -141,7 +141,7 @@
     background-color: var(--accent-color);
     border-radius: 24px;
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         font-size: 14px;
         width: 100px;
     }
@@ -177,7 +177,7 @@
     justify-content: space-around;
     padding: 0 24px 24px;  
 
-    @media (min-width: 576px) and (max-width: 992px) {
+    @media (min-width: $mobile) and (max-width: $laptop) {
         display: grid;   
         grid-template-columns: 50% 50%;
         text-align: center;
@@ -185,12 +185,12 @@
 }
 
 .contacts-list__item {
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         margin-right: 28px;
         margin-bottom: 5px;
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: $mobile) {
         margin: 0;
     }
 }
@@ -218,7 +218,7 @@
     padding-left: 85px;
     margin-bottom: 16px;
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         padding-left: 45px;
     }
 }
@@ -237,7 +237,7 @@
     background-color: var(--accent-color);
     border-radius: 50%;
 
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         left: 28px;
     }
 }
@@ -253,7 +253,7 @@
 }
 
 .interests__item img {
-    @media (max-width: 992px) {
+    @media (max-width: $laptop) {
         max-width: 35px;
     }
 }

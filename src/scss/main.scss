@@ -9,11 +9,16 @@
 html {
     display: flex;
     flex-direction: column;
+    height: 100%;
     font-size: 20px;
 
     @media (max-width: $laptop) {
         font-size: 16px;
     }
+}
+
+#root {
+    height: 100%;
 }
 
 body {

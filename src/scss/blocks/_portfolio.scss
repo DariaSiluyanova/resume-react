@@ -43,11 +43,7 @@
 
 .portfolio__img:hover {
     box-shadow: 6px 6px 30px 10px var(--accent-color);
-    transform: translateX(20px);
-}
-
-.portfolio__img:hover {
-    transform: translateX(5px);
+    transform: translateX(2px);
     transition: 0.5s all;
 }
 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function PortfolioItem({id, href, src2x, src1x, text}) {
   return (
     <motion.div   
-      animate={{ y: 30 }}
+      animate={{ y: 10 }}
       transition={{
         ease: "linear",
         duration: 1,

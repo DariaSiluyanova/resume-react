@@ -6,3 +6,13 @@
 @import "variables";
 @import "reset";
 
+html {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+body {
+    flex-grow: 1;
+}
+

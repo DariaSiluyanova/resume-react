@@ -4,30 +4,30 @@
     position: relative;
     text-transform: uppercase;
     color: var(--main-page-color);
-    font-size: 24px;
-    padding-left: 64px;
-    padding-bottom: 20px;
+    font-size: 1.2rem;
+    padding-left: 3.2rem;
+    padding-bottom: 1rem;
 
     @media (max-width: $laptop) {
-        font-size: 18px;
-        padding-left: 37px;
+        font-size: 1.125rem;
+        padding-left: 2.3125rem;
     }
 }
 
 .title::before {
     content: "";
     position: absolute;
-    left: -22px;
-    top: -5px;
-    width: 39px;
-    height: 39px;
+    left: -1.1rem;
+    top: -0.25rem;
+    width: 1.95rem;
+    height: 1.95rem;
     border-radius: 50%;
     background-color: var(--accent-color);
 
     @media (max-width: $laptop) {
-        left: -16px;
-        width: 25px;
-        height: 25px;
+        left: -1rem;
+        width: 1.5625rem;
+        height: 1.5625rem;
     }
 }
 
@@ -35,30 +35,27 @@
     max-width: 50%;
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color); 
-    padding-top: 73px;
-    padding-right: 24px;
-    padding-left: 10%;
-    padding-bottom: 30px;
+    padding: 1.8rem 1.75rem 10% 1.5rem;
     color: var(--font-side);
     box-sizing: border-box;
 
     @media (max-width: $laptop) {
-        padding: 73px 24px 120px;
+        padding: 4.55rem 1rem 7.5rem 1.2rem;
     }
 
     @media (max-width: $mobile) {
         max-width: 100%;
-        padding: 30px;
+        padding: 1.875rem;
     }
 }
 
 .main-header,
 .main-info {
-    max-width: 350px;
-    width: 310px;
+    max-width: 17.5rem;
+    width: 15.5rem;
 
     @media (max-width: $laptop) {
-        max-width: 210px
+        max-width: 13.125rem
     }
 
     @media (max-width: $mobile) {
@@ -81,11 +78,11 @@
 }
 
 .person__container {
-    max-width: 230px;
-    max-height: 230px;
+    max-width: 11.5rem;
+    max-height: 11.5rem;
 
     @media (max-width: $laptop) {
-        max-width: 160px;
+        max-width: 10rem;
     }
 }
 
@@ -94,8 +91,8 @@
 }
 
 .person__name {
-    padding-top: 30px;
-    font-size: 32px;
+    padding-top: 1.5rem;
+    font-size: 1.6rem;
     font-weight: var(--semi-bold);
     background-image: 
         linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
@@ -106,7 +103,7 @@
     -moz-text-fill-color: transparent;
 
     @media (max-width: $laptop) {
-         font-size: 22px;
+         font-size: 1.375rem;
     }
 
     @media (max-width: $mobile) {
@@ -116,9 +113,9 @@
 
 .nav {
     width: 100%;
-    padding-top: 16px;
-    font-size: 18px;
-    margin-bottom: 18px;
+    padding-top: 0.8rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.9rem;
 }
 
 .nav__list {
@@ -132,18 +129,18 @@
 }
 
 .nav__item {
-    width: 135px;
-    padding: 16px 0;
+    width: 6.5rem;
+    padding: 0.8rem 0.6rem;
     font-family: "Inter", sans-serif;
-    font-size: 18px;
+    font-size: 0.9rem;
     font-weight: var(--bold);
     text-align: center;
     background-color: var(--accent-color);
-    border-radius: 24px;
+    border-radius: 1.2rem;
 
     @media (max-width: $laptop) {
-        font-size: 14px;
-        width: 100px;
+        font-size: 0.875rem;
+        width: 6.25rem;
     }
 }
 
@@ -158,24 +155,24 @@
 }
 
 .contacts {
-    border-left: 6px solid #FCB045;
+    border-left: 0.45rem solid #FCB045;
 }
 
 .interests {
-    border-left: 6px solid transparent;
-    margin-bottom: 30px;
+    border-left: 0.45rem solid transparent;
+    margin-bottom: 1.5rem;
 }
 
 .icon-contacts {
-    width: 30px;
-    height: 30px;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .contacts-list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0 24px 24px;  
+    padding: 0 1.2rem 1.2rem;  
 
     @media (min-width: $mobile) and (max-width: $laptop) {
         display: grid;   
@@ -186,8 +183,8 @@
 
 .contacts-list__item {
     @media (max-width: $laptop) {
-        margin-right: 28px;
-        margin-bottom: 5px;
+        margin-right: 1.4rem;
+        margin-bottom: 0.25rem;
     }
 
     @media (max-width: $mobile) {
@@ -203,42 +200,42 @@
 .lang__list {
     display: grid;
     grid-template-columns: 60% 40%;
-    font-size: 14px;
-    padding-bottom: 8px;
+    font-size: 0.7rem;
+    padding-bottom: 0.4rem;
 }
 
 .lang__list {
-    padding-bottom: 12px;
+    padding-bottom: 0.6rem;
 }
 
 .skills__item,
 .lang__item {
     position: relative;
     color: var(--main-page-color);
-    padding-left: 85px;
-    margin-bottom: 16px;
+    padding-left: 4.25rem;
+    margin-bottom: 0.8rem;
 
     @media (max-width: $laptop) {
-        padding-left: 45px;
+        padding-left: 2.8125rem;
     }
 }
 
 .skills__item:nth-child(even) {
-    padding-left: 20px;
+    padding-left: 1rem;
 }
 
 .skills__item::before,
 .lang__item::before {
     content: "";
     position: absolute;
-    left: 64px;
-    width: 12px;
-    height: 12px;
+    left: 3.2rem;
+    width: 0.6rem;
+    height: 0.6rem;
     background-color: var(--accent-color);
     border-radius: 50%;
 
     @media (max-width: $laptop) {
-        left: 28px;
+        left: 1.75rem;
     }
 }
 
@@ -254,7 +251,7 @@
 
 .interests__item img {
     @media (max-width: $laptop) {
-        max-width: 35px;
+        max-width: 2.1875rem;
     }
 }
 
@@ -264,9 +261,9 @@
 }
 
 .download li {
-    max-width: 250px;
+    max-width: 12.5rem;
     width: 100%;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .link {

@@ -1,54 +1,13 @@
-import React, { useState } from 'react'
 import Avatar from '../assets/Avatar2x.png'
-import Btn from './blocks/Btn';
 import Contacts from './blocks/Contact';
 import Skills from './blocks/Skills';
 import Languages from './blocks/Languages';
 import Interests from './blocks/Interests';
 import { motion } from 'framer-motion';
 import Resume from './Siluyanova_resume.pdf';
-
-const buttons = [
-  {
-    id: 0,
-    path:"/",
-    text: "Главная",
-  },
-  {
-    id: 1,
-    path:"/portfolio",
-    text: "Портфолио",
-  },
-]
+import Navigation from './blocks/Navigation';
 
 export default function SideBar() {
-  const [btnState, changeState] = useState(
-    {
-      activeBtn: null,
-      content: buttons,
-    }
-  );
-
-  /**
-   * функция переключает состояние кнопки на active
-   */
-  function toggleActive (index) {
-    changeState({...btnState, activeBtn: btnState.content[index]})
-  }
-
-  /**
-   * функция возвращает класс active для нажатой кнопки 
-   * @param {Number} index 
-   * @returns className
-   */
-  function makeActive(index) {
-    if(btnState.content[index] === btnState.activeBtn) {
-        return 'active'
-    } else {
-      return ''
-    }
-  }
-
   return (
     <div className="side-info">
       <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
@@ -64,20 +23,7 @@ export default function SideBar() {
               </div>
               <h1 className="person__name">Силуянова Дарья</h1>
             </div>
-            <nav className="nav">
-              <ul className="nav__list">
-                { btnState.content.map((btn) => 
-                  <Btn 
-                    click={()=>{ toggleActive(btn.id) }} 
-                    active={ makeActive(btn.id)} 
-                    link={btn.path} 
-                    text={btn.text} 
-                    key={btn.id} 
-                    id={btn.id}
-                  />
-                )}
-              </ul>
-            </nav>
+            <Navigation />
           </section>
         </header>
         <div className="main-info">

@@ -3,6 +3,8 @@ import React from "react";
 import "./navigation.scss";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { makeActive } from "../../../scripts/makeActive.js";
+import { toggleActive } from "../../../scripts/toggle.js"
 
 const buttons = [
   {
@@ -34,37 +36,17 @@ export default function Navigation() {
     if (activeButton) {
       changeState({ ...btnState, activeBtn: activeButton });
     }
-  }, [btnState, location.pathname]);
-
-  /**
-   * функция добавляет кнопку по клику в свойство activeBtn объекта btnState
-   */
-  function toggleActive(index) {
-    changeState({ ...btnState, activeBtn: btnState.content[index] });
-  }
-
-  /**
-   * функция возвращает класс active для нажатой кнопки
-   * @param {Number} index
-   * @returns className
-   */
-  function makeActive(index) {
-    if (btnState.content[index] === btnState.activeBtn) {
-      return "active";
-    } else {
-      return "";
-    }
-  }
+  }, [location.pathname]);
 
   return (
     <nav className="nav">
       <ul className="nav__list">
-        {btnState.content.map((btn) => (
+        {btnState.content.map((btn, index) => (
           <Btn
             click={() => {
-              toggleActive(btn.id);
+              toggleActive(index, changeState, btnState);
             }}
-            active={makeActive(btn.id)}
+            active={makeActive(index, btnState)}
             link={btn.path}
             text={btn.text}
             key={btn.id}

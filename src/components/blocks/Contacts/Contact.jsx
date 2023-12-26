@@ -42,7 +42,7 @@ const data = [
   },
 ];
 
-const dataList = data.map((item) => <ContactItem {...item} />);
+const dataList = data.map((item) => <ContactItem key={item.id} {...item} />);
 
 export default function Contact() {
   return (

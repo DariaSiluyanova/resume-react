@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const promo = [
   <h3 className="promo__title">Привет!</h3>,
-  <p className="promo__text">
+  <div className="promo__text">
     Я&nbsp;начинающий{" "}
     <span className="promo__pos">frontend&nbsp;developer</span>,
     рада&nbsp;познакомиться!{" "}
@@ -16,7 +16,7 @@ const promo = [
       о&nbsp;моих&nbsp;профессиональных навыках и&nbsp;обязательно не забудь
       посмотреть моё портфолио!
     </div>
-  </p>,
+  </div>,
 ];
 
 export default function Index() {
@@ -27,7 +27,7 @@ export default function Index() {
       exit={{ opacity: 0 }}
     >
       <div className="index-main">
-        <Promo text={promo} />
+        <Promo key={promo.length} id={promo.length} text={promo} />
         <div className="index-main__container">
           <About />
           <Edu />

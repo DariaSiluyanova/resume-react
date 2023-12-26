@@ -14,11 +14,11 @@ import ToDo from "../assets/content-todo.jpg";
 import { motion } from "framer-motion";
 
 const promo = [
-  <p className="promo__text">
+  <div className="promo__text">
     Все проекты выложены на хостинге! Ты можешь перейти по ссылке в описании к
     проекту <span className="promo__pos">на github</span> и посмотреть готовую
     реализацию того, что тебе интересно.
-  </p>,
+  </div>,
 ];
 
 const dataPortfolio = [
@@ -67,7 +67,7 @@ export default function Portfolio() {
       exit={{ opacity: 0 }}
     >
       <div className="index-main">
-        <Promo text={promo} />
+        <Promo key={promo.length} id={promo.length} text={promo} />
         <ul className="portfolio">
           {dataPortfolio.map((data) => (
             <PortfolioItem {...data} />

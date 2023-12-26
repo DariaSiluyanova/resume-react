@@ -19,7 +19,6 @@ const buttons = [
     text: "Портфолио",
   },
 ]
-// const btnList = buttons.map(btn => <Btn link={btn.path} text={btn.text} key={btn.id} id={btn.id}/>)
 
 export default function SideBar() {
   const [btnState, changeState] = useState(
@@ -49,60 +48,61 @@ export default function SideBar() {
     }
   }
 
-  const onButtonClick = () => {
-    const pdfUrl = "../Siluyanova_resume.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Siluyanova_resume.pdf"; // specify the filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-};
+// const onButtonClick = () => {
+//   const pdfUrl = "../Siluyanova_resume.pdf";
+//   const link = document.createElement("a");
+//   link.href = pdfUrl;
+//   link.download = "Siluyanova_resume.pdf"; // specify the filename
+//   document.body.appendChild(link);
+//   link.click();
+//   document.body.removeChild(link);
+// };
 
   return (
     <div className="side-info">
-      
-    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-      <header className="main-header">
-        <section className="person">
-          <div className="mobile">
-            <div className="person__container">
-              <img
-                src={Avatar}
-                alt="Аватар соискателя"
-                className="person__avatar"
-              />
-            </div>
-            <h1 className="person__name">Силуянова Дарья</h1>
-          </div>
-          <nav className="nav">
-            <ul className="nav__list">
-              {btnState.content.map((btn) => 
-                <Btn 
-                  click={()=>{ toggleActive(btn.id) }} 
-                  active={makeActive(btn.id)} 
-                  link={btn.path} 
-                  text={btn.text} 
-                  key={btn.id} 
-                  id={btn.id}
+      <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+        <header className="main-header">
+          <section className="person">
+            <div className="mobile">
+              <div className="person__container">
+                <img
+                  src={Avatar}
+                  alt="Аватар соискателя"
+                  className="person__avatar"
                 />
-              )}
-            </ul>
-          </nav>
-        </section>
-      </header>
-      <div className="main-info">
-        <Contacts />
-        <Skills />
-        <Languages />
-        <Interests />
-        <div className="download">
-          <li className="nav__item link" onClick={ () => {onButtonClick()} }>
-              Загрузить резюме
-          </li>
+              </div>
+              <h1 className="person__name">Силуянова Дарья</h1>
+            </div>
+            <nav className="nav">
+              <ul className="nav__list">
+                { btnState.content.map((btn) => 
+                  <Btn 
+                    click={()=>{ toggleActive(btn.id) }} 
+                    active={ makeActive(btn.id)} 
+                    link={btn.path} 
+                    text={btn.text} 
+                    key={btn.id} 
+                    id={btn.id}
+                  />
+                )}
+              </ul>
+            </nav>
+          </section>
+        </header>
+        <div className="main-info">
+          <Contacts />
+          <Skills />
+          <Languages />
+          <Interests />
+          <div className="download">
+            <a href="./" download="Siluyanova__resume.pdf">
+              <button type='button' className="nav__item btn-download">
+                  Загрузить резюме
+              </button>
+            </a>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
     </div>
   )
 }

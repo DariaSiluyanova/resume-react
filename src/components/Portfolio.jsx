@@ -60,7 +60,7 @@ const dataPortfolio = [
   },
 ]
 
-const dataList = dataPortfolio.map( data => <PortfolioItem key={data.id} id={data.id} href={data.href} src2x={data.src2x} src1x={data.src1x} text={data.text}/>)
+const dataList = dataPortfolio.map( data => <PortfolioItem {...data}/>)
 
 export default function Portfolio() {
   return (

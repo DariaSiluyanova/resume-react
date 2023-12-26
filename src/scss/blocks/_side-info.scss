@@ -137,6 +137,9 @@
     text-align: center;
     background-color: var(--accent-color);
     border-radius: 1.2rem;
+    color: var(--main-page-color);
+    transition: 500ms ease-in;
+    cursor: pointer;
 
     @media (max-width: $laptop) {
         font-size: 0.875rem;
@@ -144,14 +147,18 @@
     }
 }
 
+.btn-download {
+    width: 12.5rem;
+}
+
 .nav__item:hover {
     transform: scale(1.1, 1.1);
     opacity: 0.9;
-    transition: all 500ms ease; 
 }
 
 .nav__item.active {
     background-color: var(--main-page-color);
+    color: var(--bg-color);
 }
 
 .contacts {
@@ -161,11 +168,6 @@
 .interests {
     border-left: 0.45rem solid transparent;
     margin-bottom: 1.5rem;
-}
-
-.icon-contacts {
-    width: 1.5rem;
-    height: 1.5rem;
 }
 
 .contacts-list {
@@ -190,6 +192,12 @@
     @media (max-width: $mobile) {
         margin: 0;
     }
+}
+
+.icon-contacts {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: 1s ease;
 }
 
 .icon-contacts:hover {
@@ -266,7 +274,4 @@
     padding: 1rem;
 }
 
-.link {
-    cursor: pointer;
-}
 

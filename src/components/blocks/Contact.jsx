@@ -40,7 +40,7 @@ const data = [
         alt: "github-link",
     },
 ];
-const dataList = data.map(item => <ContactItem id={item.id} key={item.id} href={item.href} src={item.src} alt={item.alt}/>)
+const dataList = data.map(item => <ContactItem {...item}/>)
 
 export default function Contact() {
   return (

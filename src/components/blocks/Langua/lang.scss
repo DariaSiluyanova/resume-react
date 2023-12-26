@@ -2,37 +2,37 @@
 @import "../Contacts/contacts.scss";
 
 .lang__list {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    font-size: 0.7rem;
-    padding-bottom: 0.4rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  font-size: 0.7rem;
+  padding-bottom: 0.4rem;
 }
 
 .lang__list {
-    padding-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 .lang__item {
-    position: relative;
-    color: var(--main-page-color);
-    padding-left: 4.25rem;
-    margin-bottom: 0.8rem;
+  position: relative;
+  color: var(--main-page-color);
+  padding-left: 4.25rem;
+  margin-bottom: 0.8rem;
 
-    @media (max-width: $laptop) {
-        padding-left: 2.8125rem;
-    }
+  @media (max-width: $laptop) {
+    padding-left: 2.8125rem;
+  }
 }
 
 .lang__item::before {
-    content: "";
-    position: absolute;
-    left: 3.2rem;
-    width: 0.6rem;
-    height: 0.6rem;
-    background-color: var(--accent-color);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 3.2rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: var(--accent-color);
+  border-radius: 50%;
 
-    @media (max-width: $laptop) {
-        left: 1.75rem;
-    }
+  @media (max-width: $laptop) {
+    left: 1.75rem;
+  }
 }

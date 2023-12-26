@@ -9,21 +9,21 @@ import { AnimatePresence } from "framer-motion";
 
 export default function App() {
   const location = useLocation();
-  return ( 
-      <main className="main-body">
-        <SideBar />
-        <div className="content">
-          <AnimatePresence mode="wait"> 
-            <Switch location={location} key={location.pathname}>
-              <Route exact path="/">
-                <Index/>
-              </Route>
-              <Route path="/portfolio">
-                <Portfolio/>
-              </Route>
-            </Switch>
-          </AnimatePresence>
-        </div>
-      </main>
+  return (
+    <main className="main-body">
+      <SideBar />
+      <div className="content">
+        <AnimatePresence mode="wait">
+          <Switch location={location} key={location.pathname}>
+            <Route exact path="/">
+              <Index />
+            </Route>
+            <Route path="/portfolio">
+              <Portfolio />
+            </Route>
+          </Switch>
+        </AnimatePresence>
+      </div>
+    </main>
   );
 }

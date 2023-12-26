@@ -1,32 +1,32 @@
 @import "../../../scss/variables.scss";
 
 .title {
-    position: relative;
-    text-transform: uppercase;
-    color: var(--main-page-color);
-    font-size: 1.2rem;
-    padding-left: 3.2rem;
-    padding-bottom: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  color: var(--main-page-color);
+  font-size: 1.2rem;
+  padding-left: 3.2rem;
+  padding-bottom: 1rem;
 
-    @media (max-width: $laptop) {
-        font-size: 1.125rem;
-        padding-left: 2.3125rem;
-    }
+  @media (max-width: $laptop) {
+    font-size: 1.125rem;
+    padding-left: 2.3125rem;
+  }
 }
 
 .title::before {
-    content: "";
-    position: absolute;
-    left: -1.2rem;
-    top: -0.25rem;
-    width: 1.95rem;
-    height: 1.95rem;
-    border-radius: 50%;
-    background-color: var(--accent-color);
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  top: -0.25rem;
+  width: 1.95rem;
+  height: 1.95rem;
+  border-radius: 50%;
+  background-color: var(--accent-color);
 
-    @media (max-width: $laptop) {
-        left: -1rem;
-        width: 1.5625rem;
-        height: 1.5625rem;
-    }
+  @media (max-width: $laptop) {
+    left: -1rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
 }

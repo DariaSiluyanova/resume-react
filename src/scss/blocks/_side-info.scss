@@ -17,7 +17,7 @@
 .title::before {
     content: "";
     position: absolute;
-    left: -1.1rem;
+    left: -1.2rem;
     top: -0.25rem;
     width: 1.95rem;
     height: 1.95rem;
@@ -93,6 +93,7 @@
 .person__name {
     padding-top: 1.5rem;
     font-size: 1.6rem;
+    line-height: 2rem;
     font-weight: var(--semi-bold);
     background-image: 
         linear-gradient(92deg, #FCB045 27.14%, #FF3F78 121.36%);
@@ -104,6 +105,7 @@
 
     @media (max-width: $laptop) {
          font-size: 1.375rem;
+         line-height: 1.6rem;
     }
 
     @media (max-width: $mobile) {
@@ -138,7 +140,7 @@
     background-color: var(--accent-color);
     border-radius: 1.2rem;
     color: var(--main-page-color);
-    transition: 500ms ease-in;
+    transition: 200ms ease-in;
     cursor: pointer;
 
     @media (max-width: $laptop) {
@@ -152,7 +154,7 @@
 }
 
 .nav__item:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.06);
     opacity: 0.9;
 }
 
@@ -197,11 +199,11 @@
 .icon-contacts {
     width: 1.5rem;
     height: 1.5rem;
-    transition: 1s ease;
+    transition: 200ms ease;
 }
 
 .icon-contacts:hover {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
 }
 
 .skills__list,

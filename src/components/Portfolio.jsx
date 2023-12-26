@@ -60,15 +60,13 @@ const dataPortfolio = [
   },
 ]
 
-const dataList = dataPortfolio.map( data => <PortfolioItem {...data}/>)
-
 export default function Portfolio() {
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
       <div className="index-main">
         <Promo text={promo}/>
         <ul className="portfolio">
-            {dataList}
+            { dataPortfolio.map( data => <PortfolioItem {...data}/>) }
         </ul>
       </div>
     </motion.div>

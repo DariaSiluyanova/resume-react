@@ -40,14 +40,13 @@ const data = [
         alt: "github-link",
     },
 ];
-const dataList = data.map(item => <ContactItem {...item}/>)
 
 export default function Contact() {
   return (
     <section className="contacts">
         <Title title={title}/>
         <ul className="main-info__list contacts-list">
-            {dataList}
+            { data.map(item => <ContactItem {...item}/>) }
         </ul>
     </section>
   )

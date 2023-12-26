@@ -1,11 +1,12 @@
 :root {
     //colors
-    --bg-color: #3C3F46;
-    --main-page-color: #ffffff;
-    --font-side: #1C1E23;
-    --accent-color: #F5A415;
-    --shadowed: #C98615;
-    --label-index: #282A30;
+    --bg-color: rgb(60, 63, 70);
+    --main-page-color: rgb(255, 255, 255);
+    --font-side: rgb(28, 30, 35);
+    --accent-color: rgba(245, 164, 21, 1);
+    --shadowed: rgba(201, 134, 21, 1);
+    --shadowed-card: rgba(245, 164, 21, 0.4);
+    --label-index: rgb(40, 42, 48);
 
 
     //fonts weights

@@ -34,16 +34,17 @@
 }
 
 .portfolio__img {
-    border: 0.15rem solid var(--accent-color);
+    border: 0.1rem solid var(--accent-color);
     border-radius: 0.8rem;
     background-color: var(--bg-color);
     margin-bottom: 1rem;
     max-width: 12.5rem;
-    transition: 0.5s;
+    transition: 500ms;
 }
 
 .portfolio__img:hover {
-    box-shadow: 0.3rem 0.3rem 1.5rem 0.5rem var(--accent-color);
+    box-shadow: 0.3rem 0.3rem 1rem 0.3rem var(--shadowed-card);
+    border: var(--shadowed-card);
     transform: translateX(0.1rem);
 }
 

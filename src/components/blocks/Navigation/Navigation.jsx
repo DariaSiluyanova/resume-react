@@ -1,36 +1,31 @@
 import Btn from "../Buttons/Btn";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./navigation.scss";
-import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { toggleActive } from "../../../scripts/toggle.js";
 import { makeActive } from "../../../scripts/makeActive.js";
-import { toggleActive } from "../../../scripts/toggle.js"
-
-const buttons = [
-  {
-    id: 0,
-    path: "/",
-    text: "Главная",
-  },
-  {
-    id: 1,
-    path: "/portfolio",
-    text: "Портфолио",
-  },
-];
 
 export default function Navigation() {
   const location = useLocation();
   const [btnState, changeState] = useState({
     activeBtn: null,
-    content: buttons,
+    content: [{
+      id: 0,
+      path: "/",
+      text: "Главная",
+    },
+    {
+      id: 1,
+      path: "/portfolio",
+      text: "Портфолио",
+    }],
   });
 
   useEffect(() => {
     /**
      * Находим кнопку, путь которой соответствует текущему
      */
-    const activeButton = buttons.find((btn) => btn.path === location.pathname);
+    const activeButton = btnState.content.find((btn) => btn.path === location.pathname);
 
     //добавляем соответствующую кнопку в свойство activeBtn объекта btnState
     if (activeButton) {
@@ -41,15 +36,15 @@ export default function Navigation() {
   return (
     <nav className="nav">
       <ul className="nav__list">
-        {btnState.content.map((btn, index) => (
+        {btnState.content.map((btn) => (
           <Btn
+            key={btn.id}
             click={() => {
-              toggleActive(index, changeState, btnState);
+              toggleActive(btn.id, changeState, btnState);
             }}
-            active={makeActive(index, btnState)}
+            active={makeActive(btn.id, btnState)}
             link={btn.path}
             text={btn.text}
-            key={btn.id}
             id={btn.id}
           />
         ))}

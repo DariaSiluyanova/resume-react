@@ -1,0 +1,45 @@
+@import "../../../scss/_variables";
+
+.nav__item {
+    width: 6.5rem;
+    padding: 0.8rem 0.6rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: var(--bold);
+    text-align: center;
+    background-color: var(--accent-color);
+    border-radius: 1.2rem;
+    color: var(--main-page-color);
+    transition: 200ms ease-in;
+    cursor: pointer;
+
+    @media (max-width: $laptop) {
+        font-size: 0.875rem;
+        width: 6.25rem;
+    }
+}
+
+.nav__item:hover {
+    transform: scale(1.06);
+    opacity: 0.9;
+}
+
+.nav__item.active {
+    background-color: var(--main-page-color);
+    color: var(--bg-color);
+}
+
+.btn-download {
+    width: 12.5rem;
+}
+
+.download{
+    display: flex;
+    justify-content: center;
+}
+
+.download li {
+    max-width: 12.5rem;
+    width: 100%;
+    padding: 1rem;
+}

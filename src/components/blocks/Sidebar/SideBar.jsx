@@ -1,11 +1,12 @@
-import Avatar from '../assets/Avatar2x.png'
-import Contacts from './blocks/Contact';
-import Skills from './blocks/Skills';
-import Languages from './blocks/Languages';
-import Interests from './blocks/Interests';
+import Avatar from '../../../assets/Avatar2x.png'
+import Contacts from '../Contacts/Contact';
+import Skills from '../Skills/Skills';
+import Languages from '../Langua/Languages';
+import Interests from '../Interests/Interests';
 import { motion } from 'framer-motion';
-import Resume from './Siluyanova_resume.pdf';
-import Navigation from './blocks/Navigation';
+import Navigation from '../Navigation/Navigation';
+import BtnDownload from '../Buttons/BtnDownload';
+import "./sidebar.scss";
 
 export default function SideBar() {
   return (
@@ -31,13 +32,7 @@ export default function SideBar() {
           <Skills />
           <Languages />
           <Interests />
-          <div className="download">
-            <a href={Resume} download="Siluyanova">
-              <button type='button' className="nav__item btn-download">
-                  Загрузить резюме
-              </button>
-            </a>
-          </div>
+          <BtnDownload />
         </div>
       </motion.div>
     </div>

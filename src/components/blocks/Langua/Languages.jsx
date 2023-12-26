@@ -1,6 +1,8 @@
-import React from 'react'
-import Title from './Title'
-const title = "Языки"
+import React from 'react';
+import Title from '../Title/Title';
+import "./lang.scss";
+
+const title = "Языки";
 
 export default function Languages() {
   return (

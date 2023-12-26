@@ -1,0 +1,39 @@
+@import '../../../scss/_variables.scss'; 
+
+.contacts {
+    border-left: 0.45rem solid #FCB045;
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 1.2rem 1.2rem;  
+
+    @media (min-width: $mobile) and (max-width: $laptop) {
+        display: grid;   
+        grid-template-columns: 50% 50%;
+        text-align: center;
+    }
+}
+
+.contacts-list__item {
+    @media (max-width: $laptop) {
+        margin-right: 1.4rem;
+        margin-bottom: 0.25rem;
+    }
+
+    @media (max-width: $mobile) {
+        margin: 0;
+    }
+}
+
+.icon-contacts {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: 200ms ease;
+}
+
+.icon-contacts:hover {
+    transform: scale(1.1, 1.1);
+}

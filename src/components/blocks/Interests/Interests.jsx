@@ -1,8 +1,10 @@
 import React from 'react';
-import Title from './Title';
-import Book from '../../assets/book.svg';
-import Music from '../../assets/music.svg';
-import Swim from '../../assets/swim.svg';
+import Title from '../Title/Title';
+import Book from '../../../assets/book.svg';
+import Music from '../../../assets/music.svg';
+import Swim from '../../../assets/swim.svg';
+import "../Contacts/contacts.scss";
+import "./interests.scss"
 
 const title = "Интересы";
 const interests = [

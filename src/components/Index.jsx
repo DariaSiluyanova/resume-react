@@ -1,8 +1,8 @@
 import React from 'react'
-import Promo from './blocks/Promo'
-import About from './blocks/About'
-import Edu from './blocks/Edu'
-import Experience from './blocks/Experience'
+import Promo from './blocks/Promo/Promo'
+import About from './blocks/Index/About'
+import Edu from './blocks/Index/Edu'
+import Experience from './blocks/Index/Experience'
 import { motion } from 'framer-motion';
 
 const promo = [

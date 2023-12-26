@@ -1,7 +1,7 @@
 import React from "react";
 import Index from "./components/Index";
 import Portfolio from "./components/Portfolio";
-import SideBar from "./components/SideBar";
+import SideBar from "./components/blocks/Sidebar/SideBar";
 import "./scss/main.scss";
 import { BrowserRouter as Route, Switch } from "react-router-dom";
 import { useLocation } from "react-router-dom";

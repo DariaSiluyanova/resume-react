@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./promo.scss";
 
 export default function Promo({text}) {
   return (

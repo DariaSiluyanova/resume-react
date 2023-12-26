@@ -1,11 +1,12 @@
 import React from 'react';
-import Title from './Title';
+import Title from '../Title/Title';
 import ContactItem from './ContactItem';
-import Phone from '../../assets/phone-icon.svg';
-import Email from '../../assets/email-icon.svg';
-import Telegram from '../../assets/telegram-icon.svg';
-import InkedIn from '../../assets/linkedIn-iconsvg.svg';
-import Github from '../../assets/github-icon.svg';
+import Phone from '../../../assets/phone-icon.svg';
+import Email from '../../../assets/email-icon.svg';
+import Telegram from '../../../assets/telegram-icon.svg';
+import InkedIn from '../../../assets/linkedIn-iconsvg.svg';
+import Github from '../../../assets/github-icon.svg';
+import "./contacts.scss";
 
 const title = "Контакты";
 const data = [
@@ -41,12 +42,14 @@ const data = [
     },
 ];
 
+const dataList = data.map(item => <ContactItem {...item}/>);
+
 export default function Contact() {
   return (
     <section className="contacts">
         <Title title={title}/>
-        <ul className="main-info__list contacts-list">
-            { data.map(item => <ContactItem {...item}/>) }
+        <ul className="contacts-list">
+            { dataList }
         </ul>
     </section>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import "./portfolio.scss";
 
 export default function PortfolioItem({id, href, src2x, src1x, text}) {
   return (

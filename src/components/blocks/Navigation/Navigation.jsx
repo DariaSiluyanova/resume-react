@@ -1,5 +1,6 @@
-import Btn from './Btn';
+import Btn from '../Buttons/Btn';
 import React from 'react';
+import "./navigation.scss";
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 

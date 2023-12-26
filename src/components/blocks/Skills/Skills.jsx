@@ -1,5 +1,7 @@
 import React from 'react';
-import Title from './Title';
+import Title from '../Title/Title';
+import "./skills.scss";
+
 const skills = ['HTML', 'CSS','VUE 3', 'Quasar', 'Vuetify', 'Gulp', 'JavaScript', 'Git'];
 const title = "Навыки";
 

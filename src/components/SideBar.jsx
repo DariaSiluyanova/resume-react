@@ -6,6 +6,7 @@ import Skills from './blocks/Skills';
 import Languages from './blocks/Languages';
 import Interests from './blocks/Interests';
 import { motion } from 'framer-motion';
+import Resume from './Siluyanova_resume.pdf';
 
 const buttons = [
   {
@@ -48,16 +49,6 @@ export default function SideBar() {
     }
   }
 
-// const onButtonClick = () => {
-//   const pdfUrl = "../Siluyanova_resume.pdf";
-//   const link = document.createElement("a");
-//   link.href = pdfUrl;
-//   link.download = "Siluyanova_resume.pdf"; // specify the filename
-//   document.body.appendChild(link);
-//   link.click();
-//   document.body.removeChild(link);
-// };
-
   return (
     <div className="side-info">
       <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
@@ -95,7 +86,7 @@ export default function SideBar() {
           <Languages />
           <Interests />
           <div className="download">
-            <a href="./" download="Siluyanova__resume.pdf">
+            <a href={Resume} download="Siluyanova">
               <button type='button' className="nav__item btn-download">
                   Загрузить резюме
               </button>

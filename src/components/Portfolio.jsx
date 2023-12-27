@@ -11,6 +11,8 @@ import Welbex from "../assets/content-welbex.jpg";
 import Welbex2x from "../assets/content-welbex2x.jpg";
 import ToDo2x from "../assets/content-todo2x.jpg";
 import ToDo from "../assets/content-todo.jpg";
+import Sedona from "../assets/content-sedona.jpg";
+import Sedona2x from "../assets/content-sedona2x.jpg";
 import { motion } from "framer-motion";
 
 const promo = [
@@ -56,6 +58,13 @@ const dataPortfolio = [
     src2x: ToDo2x,
     src1x: ToDo,
     text: "TODO приложение для рабочих и личных задач",
+  },
+  {
+    id: 5,
+    href: "https://github.com/DariaSiluyanova/1489759-sedona-30",
+    src2x: Sedona2x,
+    src1x: Sedona,
+    text: "Брошюра туристического городка Седона",
   },
 ];
 

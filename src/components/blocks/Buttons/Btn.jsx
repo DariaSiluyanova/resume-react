@@ -12,7 +12,7 @@ export default function Btn({ click, active, link = "/", text, id }) {
       <Link to={link}>
         <button
           type="button"
-          className={`nav__item ${active}`}
+          className={`nav__item ${active ? "active" : ""}`}
           key={id}
           onClick={click}
         >

@@ -9,23 +9,25 @@ export default function Navigation() {
   const location = useLocation();
   const [btnState, changeState] = useState({
     activeBtn: null,
-    content: [{
-      id: 0,
-      path: "/",
-      text: "Главная",
-    },
-    {
-      id: 1,
-      path: "/portfolio",
-      text: "Портфолио",
-    }],
+    content: [
+      {
+        id: 0,
+        path: "/",
+      },
+      {
+        id: 1,
+        path: "/portfolio",
+      },
+    ],
   });
 
   useEffect(() => {
     /**
      * Находим кнопку, путь которой соответствует текущему
      */
-    const activeButton = btnState.content.find((btn) => btn.path === location.pathname);
+    const activeButton = btnState.content.find(
+      (btn) => btn.path === location.pathname
+    );
 
     //добавляем соответствующую кнопку в свойство activeBtn объекта btnState
     if (activeButton) {
@@ -36,18 +38,26 @@ export default function Navigation() {
   return (
     <nav className="nav">
       <ul className="nav__list">
-        {btnState.content.map((btn) => (
-          <Btn
-            key={btn.id}
-            click={() => {
-              toggleActive(btn.id, changeState, btnState);
-            }}
-            active={makeActive(btn.id, btnState)}
-            link={btn.path}
-            text={btn.text}
-            id={btn.id}
-          />
-        ))}
+        <Btn
+          key={0}
+          click={() => {
+            toggleActive(0, changeState, btnState);
+          }}
+          active={makeActive(0, btnState)}
+          link={"/"}
+          text={"Главная"}
+          id={0}
+        />
+        <Btn
+          key={1}
+          click={() => {
+            toggleActive(1, changeState, btnState);
+          }}
+          active={makeActive(1, btnState)}
+          link={"/portfolio"}
+          text={"Портфолио"}
+          id={1}
+        />
       </ul>
     </nav>
   );

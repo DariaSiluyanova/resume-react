@@ -1,8 +1,0 @@
-.main-body {
-    display: flex;
-    height: 100%;
-
-    @media (max-width: 576px) {
-        flex-direction: column;
-    }
-}

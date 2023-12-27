@@ -1,0 +1,18 @@
+@import "../../../scss/variables.scss";
+
+.nav {
+  width: 100%;
+  padding-top: 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--bold);
+
+  @media (max-width: $laptop) {
+    justify-content: space-evenly;
+  }
+}

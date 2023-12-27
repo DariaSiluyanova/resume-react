@@ -1,0 +1,41 @@
+@import "../../../scss/variables.scss";
+
+.skills__list {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  font-size: 0.7rem;
+  padding-bottom: 0.4rem;
+}
+
+.skills__item {
+  position: relative;
+  color: var(--main-page-color);
+  padding-left: 4.25rem;
+  margin-bottom: 0.8rem;
+
+  @media (max-width: $laptop) {
+    padding-left: 2.8125rem;
+  }
+}
+
+.skills__item:nth-child(even) {
+  padding-left: 1rem;
+}
+
+.skills__item::before {
+  content: "";
+  position: absolute;
+  left: 3.2rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+
+  @media (max-width: $laptop) {
+    left: 1.75rem;
+  }
+}
+
+.skills__item:nth-child(even)::before {
+  left: 0;
+}

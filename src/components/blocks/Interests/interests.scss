@@ -1,0 +1,17 @@
+@import "../../../scss/variables.scss";
+.interests {
+  border-left: 0.45rem solid transparent;
+  margin-bottom: 1.5rem;
+}
+
+.interests__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.interests__item img {
+  @media (max-width: $laptop) {
+    max-width: 2.1875rem;
+  }
+}

@@ -1,0 +1,82 @@
+@import "../../../scss/variables.scss";
+
+.side-info {
+  max-width: 50%;
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
+  padding: 1.8rem 1.75rem 10% 1.5rem;
+  color: var(--font-side);
+  box-sizing: border-box;
+
+  @media (max-width: $laptop) {
+    padding: 4.55rem 1rem 7.5rem 1.2rem;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 100%;
+    padding: 1.875rem;
+  }
+}
+
+.main-header,
+.main-info {
+  max-width: 17.5rem;
+  width: 15.5rem;
+
+  @media (max-width: $laptop) {
+    max-width: 13.125rem;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person__container {
+  max-width: 11.5rem;
+  max-height: 11.5rem;
+
+  @media (max-width: $laptop) {
+    max-width: 10rem;
+  }
+}
+
+.person__avatar {
+  width: 100%;
+}
+
+.person__name {
+  padding-top: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: var(--semi-bold);
+  background-image: linear-gradient(92deg, #fcb045 27.14%, #ff3f78 121.36%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  @media (max-width: $laptop) {
+    font-size: 1.375rem;
+    line-height: 1.6rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 0;
+  }
+}

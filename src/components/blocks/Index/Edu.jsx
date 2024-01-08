@@ -15,7 +15,7 @@ export default function Edu() {
       <div className="edu__text">
         <p className="edu-info">HTML Academy</p>
         <p>Курс “Профессия frontend - разработчик"</p>
-        <p>2022 г.</p>
+        <p>2021 г.</p>
       </div>
     </section>
   );
